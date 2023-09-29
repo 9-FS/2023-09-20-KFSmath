@@ -1,11 +1,11 @@
 ---
-Topic: "KFSmath Library"
+Topic: "KFSmath"
 Author: "구FS"
 ---
 <link href="./doc_templates/md_style.css" rel="stylesheet"></link>
 <body>
 
-# <p style="text-align: center;">KFSmath Library</p>
+# <p style="text-align: center;">KFSmath</p>
 <br>
 <br>
 
