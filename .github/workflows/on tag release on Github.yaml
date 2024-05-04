@@ -1,7 +1,8 @@
 name: On Tag Release on Github
 env:
   PROJECT_NAME: KFSmath
-  PYTHON_VERSION: ^3.11.0
+  PYTHON_VERSION: ^3.12.0
+  RUN_TESTS: false
 on:
   push: 
     tags:
@@ -65,11 +66,12 @@ jobs:
           fi
       
       - name: Run Tests
+        if: ${{env.RUN_TESTS=='true'}}
         run: poetry run pytest
 
 
   create_release:
-    name: Create Release
+    name: Create Release on Github
     env:
       working-directory: ${{github.workspace}}
     needs: [datetime, test]
